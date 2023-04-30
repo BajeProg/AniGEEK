@@ -1,0 +1,38 @@
+﻿@using AniGeekAPI.Classes;
+@model List<Product>
+@{
+    ViewData["Title"] = "Catalog";
+}
+
+
+<div id="fil" class="filters">
+</div>
+<button onclick="document.getElementById('fil').style.height = document.getElementById('fil').style.height == '0px' ? '150px' : '0px'">фильтры</button>
+<br />
+<div class="back">
+    <div class="items">
+        @foreach(var item in Model)
+        {
+            <div class="item">
+                @if (item.ImageSource != null)
+                {
+                    <img class="item-image" src="@item.ImageSource">
+                }
+                else
+                {
+                    <img class="item-image" src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg">
+                }
+                <div class="price">
+                    @item.Price р
+                </div>
+                <div class="title">
+                    @item.Name
+                </div>
+                <div class="description">
+                    @item.Description
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

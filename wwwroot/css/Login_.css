@@ -1,0 +1,154 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: #151515;
+    font-family: 'Calibri';
+    font-style: normal;
+    color: #FEFEFE;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 3px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+
+
+
+a:active,
+a:hover,
+a {
+    text-decoration: none;
+    color: #151515;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #FEFEFE;
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+}
+
+#navigation li {
+    height: 100%;
+    min-width: 16.6%;
+}
+
+.container {
+    position: absolute;
+    width: 86%;
+    left: 7%;
+    top: 1.6%;
+    display: grid;
+    grid-template-rows: 120px auto 1fr;
+}
+
+.top {
+    position: relative;
+    height: 120px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.logo {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: #151515;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+.logo-img {
+    position: relative;
+    height: 100%;
+    background: #FEFEFE;
+}
+
+.logo-text {
+    position: relative;
+    background: #151515;
+    border: 1px solid #FEFEFE;
+    font-weight: 400;
+    font-size: calc(96 * (100vw / 1920));
+    line-height: 92px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.navigation {
+    position: relative;
+    height: 120px;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 72.5% 1fr;
+}
+
+.banner {
+    position: relative;
+    background: #FEFEFE;
+}
+
+.buttons {
+    font-weight: 400;
+    font-size: calc(18px + 6 * (100vw / 1920));
+    align-items: center;
+    text-align: center;
+    color: #151515;
+}
+
+.button {
+    position: relative;
+    height: 100%;
+    background: #151515;
+    color: #FEFEFE;
+    transition-duration: 500ms;
+}
+
+    .button:hover {
+        background: #FEFEFE;
+        color: #151515;
+        transition-duration: 500ms;
+    }
+
+.button #login {
+    position: relative;
+    height: 100%;
+    background: #FEFEFE;
+}

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>@ViewData["Title"] | AniGEEK</title>
+    <link rel="stylesheet" href="/css/@ViewData["Title"]_.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top">
+            @if ((string?)ViewData["Title"] != "Main")
+            {
+                <div class="logo">
+                    <img class="logo-img" src="https://avatars.mds.yandex.net/i?id=7ecd64aa2b0e0cc1987339cf2da7fa3f-4220100-images-thumbs&n=13" />
+                <div class="logo-text">
+                    AniGEEK
+                </div>
+            </div>
+            }
+            <div class="navigation">
+                <div class="banner">
+                    <img src="http://sun9-40.userapi.com/k6Ce7YdsXY3kjZcG_qfvp_o3RlwSowzEBo9LIA/bRf932Q4sK4.jpg" style="height: 100%; width: 100%; object-fit: cover;" />
+                </div>
+                <div class="buttons">
+                    <ul id="navigation">
+                        <li>
+                            <a href="~/Home/Main">
+                                <div class="button" id="main">
+                                    Главная
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="~/Home/Catalog">
+                                <div class="button" id="catalog">
+                                    Каталог
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="~/Home/Login">
+                                <div class="button" id="login">
+                                    Контакты
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        @RenderBody()
+    </div>
+</body>

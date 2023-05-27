@@ -76,16 +76,11 @@ ul {
 .content {
     position: absolute;
     width: 86%;
-    height: 778px;
     left: 7%;
     top: 150px;
     background: #151515;
-}
-
-.logo {
-    position: absolute;
-    width: 35.6%;
-    height: 100%;
+    display: grid;
+    grid-template-columns: 35.6% 1fr;
 }
 
 .image {
@@ -106,10 +101,6 @@ ul {
 }
 
 .info {
-    position: absolute;
-    width: 64.4%;
-    height: 100%;
-    left: 35.6%;
     background: #151515;
     border: 1px solid #FEFEFE;
 }

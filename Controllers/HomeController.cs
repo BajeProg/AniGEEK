@@ -27,5 +27,17 @@ namespace AniGEEK.Controllers
         {
             return View();
         }
+
+        public IActionResult Contact() => View();
+
+        public IActionResult QnA() => View();
+
+        public IActionResult Profile()
+        {
+            int? d = HttpContext.Session.GetInt32("userid");
+            if (HttpContext.Session.GetInt32("userid") == null)
+                return Redirect("~/Home/Login");
+            return View();
+        }
     }
 }

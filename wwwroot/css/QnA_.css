@@ -13,18 +13,11 @@ a {
 }
 
 button {
-    border: solid #FEFEFE 1px;
-    background-color: #151515;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
-    color: #FEFEFE;
-    transition-duration: 500ms;
+    color: #151515;
 }
-
-    button:hover {
-        background-color: #FEFEFE;
-        color: #151515;
-        transition-duration: 500ms;
-    }
 
 ul {
     display: flex;
@@ -124,33 +117,29 @@ ul {
     background: #FEFEFE;
 }
 
-form {
-    margin-top: 300px;
-    padding: 10px;
-    text-align: center;
-    border: solid #FEFEFE 1px;
-    border-radius: 20px;
-    justify-self: center;
-    height: 300px;
-    width: 300px;
+.qnas, .qna {
+    margin-top: 10px;
+    padding: 50px;
+    border: 1px solid #FEFEFE;
 }
 
-h2 {
+.qna {
+    height: 80px;
+    overflow-y: hidden;
+    transition-duration: 500ms;
+}
+
+    .qna:hover {
+        height: 300px;
+        transition-duration: 500ms;
+    }
+
+.q {
+    font-size: 72px;
     font-weight: bold;
+}
+
+.a {
+    margin-top: 50px;
     font-size: 36px;
 }
-
-input, button {
-    margin: 5px;
-    height: 35px;
-    width: calc(100% - 30px);
-}
-
-.reg {
-    color: #FEFEFE;
-}
-
-    .reg:hover {
-        text-decoration: underline;
-        color: #FEFEFE;
-    }

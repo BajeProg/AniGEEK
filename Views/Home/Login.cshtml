@@ -4,11 +4,10 @@
 @{
     ViewData["Title"] = "Login";
 }
-<form action="~/Anime/Catalog/">
-    <label for="login">Логин:</label>
-    <input type="text" id="login" name="login" required><br><br>
-    <label for="password">Пароль:</label>
-    <input type="password" id="password" name="password" required>
-    <br><br>
-    <input type="submit" value="Зарегистрироваться">
+<form action="~/Home/Profile">
+    <h2>Вход в аккаунт</h2>
+    <input type="text" name="login" placeholder="Логин">
+    <input type="password" name="pass" placeholder="Пароль">
+    <button type="submit">Вход</button>
+    <a href="" class="reg">Еще нет аккаунта?</a>
 </form>

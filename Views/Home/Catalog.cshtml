@@ -10,10 +10,10 @@
 <button onclick="document.getElementById('fil').style.height = document.getElementById('fil').style.height == '0px' ? '150px' : '0px'">фильтры</button>
 <br />
 <div class="back">
-    <div class="items">
+    <div class="items"">
         @foreach(var item in Model)
         {
-            <div class="item">
+            <div class="item" onclick="window.location = 'Item/?id=@item.ID'">
                 @if (item.ImageSource != null)
                 {
                     <img class="item-image" src="@item.ImageSource">

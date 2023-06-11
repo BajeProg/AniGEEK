@@ -1,7 +1,14 @@
 ﻿<!DOCTYPE html>
 <head>
     <title>@ViewData["Title"] | AniGEEK</title>
-    <link rel="stylesheet" href="/css/@ViewData["Title"]_.css">
+    @if (ViewData["css"] is null)
+    {
+        <link rel="stylesheet" href="/css/@ViewData["Title"]_.css">
+    }
+    else
+    {
+        <link rel="stylesheet" href="/css/@ViewData["css"]">
+    }
 </head>
 <body>
     <div class="container">

@@ -1,0 +1,156 @@
+﻿body {
+    background: #151515;
+    font-family: 'Calibri';
+    font-style: normal;
+    color: #FEFEFE;
+}
+
+a:active,
+a:hover,
+a {
+    text-decoration: none;
+    color: #151515;
+}
+
+button {
+    border: solid #FEFEFE 1px;
+    background-color: #151515;
+    cursor: pointer;
+    color: #FEFEFE;
+    transition-duration: 500ms;
+}
+
+    button:hover {
+        background-color: #FEFEFE;
+        color: #151515;
+        transition-duration: 500ms;
+    }
+
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+}
+
+#navigation li {
+    height: 100%;
+    min-width: 16.6%;
+}
+
+.container {
+    position: absolute;
+    width: 86%;
+    left: 7%;
+    top: 1.6%;
+    display: grid;
+    grid-template-rows: 120px auto 1fr;
+}
+
+.top {
+    position: relative;
+    height: 120px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.logo {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: #151515;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+.logo-img {
+    position: relative;
+    height: 100%;
+    background: #151515;
+    overflow: hidden;
+}
+
+.logo-text {
+    position: relative;
+    background: #151515;
+    border: 1px solid #FEFEFE;
+    font-weight: 400;
+    font-size: calc(96 * (100vw / 1920));
+    line-height: 92px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.navigation {
+    position: relative;
+    height: 120px;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 72.5% 1fr;
+}
+
+.banner {
+    position: relative;
+    background: #FEFEFE;
+}
+
+.buttons {
+    font-weight: 400;
+    font-size: calc(18px + 6 * (100vw / 1920));
+    align-items: center;
+    text-align: center;
+    color: #151515;
+}
+
+.button {
+    position: relative;
+    height: 100%;
+    background: #151515;
+    color: #FEFEFE;
+    transition-duration: 500ms;
+}
+
+    .button:hover {
+        background: #FEFEFE;
+        color: #151515;
+        transition-duration: 500ms;
+    }
+
+.activebtn {
+    position: relative;
+    height: 100%;
+    background: #FEFEFE;
+}
+
+.links a {
+    color: #FEFEFE;
+    margin-right: 20px;
+    font-size: 40px;
+    transition-duration: .5s;
+}
+
+    .links a:hover {
+        color: #151515;
+        background-color: #FEFEFE;
+        transition-duration: .5s;
+    }
+
+.links {
+    margin: 50px 0px;
+}
+
+.profile img {
+    max-width: 500px;
+}
+
+.profile h2 {
+    font-size: 60px;
+    margin-left: 30px;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}

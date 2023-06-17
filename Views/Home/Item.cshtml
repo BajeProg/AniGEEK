@@ -5,7 +5,7 @@
     ViewData["css"] = "Item_.css";
 }
 <div class="content">
-    <div style="display: grid;">
+    <form style="display: grid;" method="post">
         @if (Model.ImageSource != null)
         {
             <img class="image" src="@Model.ImageSource" />
@@ -13,10 +13,11 @@
         else{
             <img class="image" src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg" />
         }
-        <button class="price">
+        <input name="id" value="@Model.ID" style="display: none;">
+        <button class="price" type="submit">
             Купить @Model.Price₽
         </button>
-    </div>
+    </form>
     <div class="info">
         <div class="desc">@Model.Name</div>
         <div class="text">@Model.Description</div>

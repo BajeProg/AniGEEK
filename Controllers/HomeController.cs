@@ -1,8 +1,13 @@
 ﻿using AniGeekAPI;
+using AniGeekAPI.Classes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AniGEEK.Controllers
 {
+    public static class Info
+    {
+        public static User? user = null;
+    }
     public class HomeController : Controller
     {
         private AniGeekClient client = new AniGeekClient("SecretToken");
@@ -31,15 +36,15 @@ namespace AniGEEK.Controllers
             int? d = HttpContext.Session.GetInt32("userid");
             if (HttpContext.Session.GetInt32("userid") == null)
                 return Redirect("~/Home/Login");
-            return View();
+            return View(Info.user);
         }
 
         [HttpPost]
         public async Task<IActionResult> Profile(string login, string pass)
         {
-            var user = await client.LoginAsync(login, pass, HttpContext.Session.Id);
-            if (user is null) throw new Exception("Неправильный логин или пароль");
-            HttpContext.Session.SetInt32("userid", (int)user.ID);
+            Info.user = await client.LoginAsync(login, pass, HttpContext.Session.Id);
+            if (Info.user is null) throw new Exception("Неправильный логин или пароль");
+            HttpContext.Session.SetInt32("userid", (int)Info.user.ID);
             return Redirect("~/Home/Profile");
         }
 
@@ -50,10 +55,29 @@ namespace AniGEEK.Controllers
             return View(product);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Item(string id)
+        {
+            var product = await client.GetProductAsync(int.Parse(id));
+            if (product is null) throw new Exception("No product");
+            if (Info.user is null) throw new Exception("No user");
+            await Info.user.AddToCartAsync(product);
+            return Redirect("~/Home/Cart");
+        }
+
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
-            return Redirect("`/Home/Login");
+            Info.user = null;
+            return Redirect("~/Home/Login");
+        }
+
+        public async Task<IActionResult> Cart()
+        {
+            if(Info.user is null) return Redirect("~/Home/Login");
+            var products = await Info.user.GetProductsFromCartAsync();
+            if (products is null) throw new Exception("No Products");
+            return View(products);
         }
     }
 }

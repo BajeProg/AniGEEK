@@ -1,17 +1,16 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using AniGeekAPI.Classes;
+@model User
 @{
     ViewData["Title"] = "Profile";
 }
 <div class="links">
     <a href="~/Home/Logout">Выход</a>
-    <a href="cart.html">Корзина</a>
+    <a href="~/Home/Cart">Корзина</a>
     <a href="favorite.html">Избранное</a>
     <a href="orders.html">Заказы</a>
 </div>
 
 <div class="profile">
-    <img src="https://sun9-81.userapi.com/impf/c852232/v852232177/11de45/pS1B1xCipV4.jpg?size=564x564&quality=96&sign=6c97336867eb5d2ec557de49e00f1e85&type=album">
-    <h2>Login</h2>
+    <img src="@Model.ImageSource">
+    <h2>@Model.Login</h2>
 </div>

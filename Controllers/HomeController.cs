@@ -68,7 +68,7 @@ namespace AniGEEK.Controllers
         {
             var product = await client.GetProductAsync(id);
             if (product is null) throw new Exception("No product");
-            if (Info.user is null) return Redirect("~/Hpme/Login");
+            if (Info.user is null) return Redirect("~/Home/Login");
             await Info.user!.MakeOrderAsync(product, address);
             return Redirect("~/Home/Orders");
         }

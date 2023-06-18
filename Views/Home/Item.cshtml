@@ -5,7 +5,7 @@
     ViewData["css"] = "Item_.css";
 }
 <div class="content">
-    <form style="display: grid;" method="post">
+    <form style="display: grid;" method="get" action="~/Home/Order">
         @if (Model.ImageSource != null)
         {
             <img class="image" src="@Model.ImageSource" />

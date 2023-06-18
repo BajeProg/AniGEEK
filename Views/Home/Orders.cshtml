@@ -1,31 +1,32 @@
 ﻿@using AniGeekAPI.Classes;
-@model List<Product>
+@model List<Order>
 @{
     ViewData["Title"] = "Cart";
     ViewData["css"] = "Catalog_.css";
 }
 <div class="back">
-    <h1 style="color: #151515; margin: 10px;">Ваша корзина</h1>
+    <h1 style="color: #151515; margin: 10px;">Ваши заказы</h1>
     <div class="items" ">
     @foreach (var item in Model)
     {
-            <div class="item" onclick="window.location = 'Item/?id=@item.ID'">
-            @if (item.ImageSource != null)
+            <div class="item" onclick="window.location = 'Item/?id=@item.Product?.ID'">
+            @if (item.Product?.ImageSource != null)
             {
-                    <img class="item-image" src="@item.ImageSource">
+                    <img class="item-image" src="@item.Product?.ImageSource">
             }
             else
             {
                     <img class="item-image" src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg">
             }
                 <div class="price">
-                @item.Price р
+                @item.Product?.Price
                 </div>
                 <div class="title">
-                @item.Name
+                @item.Product?.Name
                 </div>
                 <div class="description">
-                @item.Description
+                    @item.Address <br><br>
+                @item.Status
                 </div>
             </div>
     }

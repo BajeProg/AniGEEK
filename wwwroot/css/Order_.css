@@ -1,0 +1,167 @@
+﻿body {
+    background: #151515;
+    font-family: 'Calibri';
+    font-style: normal;
+    color: #FEFEFE;
+}
+
+a:active,
+a:hover,
+a {
+    text-decoration: none;
+    color: #151515;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #151515;
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+}
+
+#navigation li {
+    height: 100%;
+    min-width: 16.6%;
+}
+
+.container {
+    position: absolute;
+    width: 86%;
+    left: 7%;
+    top: 1.6%;
+    display: grid;
+    grid-template-rows: 120px auto 1fr;
+}
+
+.top {
+    position: relative;
+    height: 120px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.logo {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: #151515;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+.logo-img {
+    position: relative;
+    height: 100%;
+    background: #151515;
+    overflow: hidden;
+}
+
+.logo-text {
+    position: relative;
+    background: #151515;
+    border: 1px solid #FEFEFE;
+    font-weight: 400;
+    font-size: calc(96 * (100vw / 1920));
+    line-height: 92px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.navigation {
+    position: relative;
+    height: 120px;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 72.5% 1fr;
+}
+
+.banner {
+    position: relative;
+    background: #FEFEFE;
+}
+
+.buttons {
+    font-weight: 400;
+    font-size: calc(18px + 6 * (100vw / 1920));
+    align-items: center;
+    text-align: center;
+    color: #151515;
+}
+
+.button {
+    position: relative;
+    height: 100%;
+    background: #151515;
+    color: #FEFEFE;
+    transition-duration: 500ms;
+}
+
+    .button:hover {
+        background: #FEFEFE;
+        color: #151515;
+        transition-duration: 500ms;
+    }
+
+/* Стили для основного контейнера */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 120px);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для заголовка */
+h2 {
+    margin-bottom: 20px;
+    color: #FEFEFE;
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стили для метки */
+label {
+    margin-bottom: 10px;
+    color: #FEFEFE;
+    font-weight: bold;
+}
+
+/* Стили для текстового поля */
+input[type="text"] {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+/* Стили для кнопки */
+button {
+    padding: 10px 20px;
+    background-color: #fefefe;
+    color: #151515;
+    border: 1px solid #FEFEFE;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+    /* Стили при наведении на кнопку */
+    button:hover {
+        background-color: #151515;
+        color: #FEFEFE;
+        transition-duration: .5s;
+    }

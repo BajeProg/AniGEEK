@@ -1,0 +1,14 @@
+﻿@using AniGeekAPI.Classes;
+@model Product
+@{
+    ViewData["Title"] = "Order";
+}
+<div class="content">
+    <h2>Набор наклеек? Хороший выбор!</h2>
+    <form method="post">
+        <label for="address">Куда доставить?</label>
+        <input type="text" name="address" id="address" placeholder="Адрес...">
+        <input type="hidden" name="id" value="@Model.ID">
+        <button type="submit">Продолжить</button>
+    </form>
+</div>

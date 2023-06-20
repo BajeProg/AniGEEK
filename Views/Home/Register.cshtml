@@ -4,10 +4,10 @@
 @{
     ViewData["Title"] = "Login";
 }
-<form action="~/Home/Profile" method="post">
-    <h2>Вход в аккаунт</h2>
+<form action="~/Home/Register" method="post">
+    <h2>Регистрация</h2>
     <input type="text" name="login" placeholder="Логин" required>
     <input type="password" name="pass" placeholder="Пароль" required>
-    <button type="submit">Вход</button>
-    <a href="~/Home/Register" class="reg">Еще нет аккаунта?</a>
+    <button type="submit">Регистрация</button>
+    <a href="~/Home/Login" class="reg">Уже есть аккаунт?</a>
 </form>

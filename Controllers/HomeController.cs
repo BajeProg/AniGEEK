@@ -22,6 +22,8 @@ namespace AniGEEK.Controllers
         public IActionResult Contact() => View();
 
         public IActionResult QnA() => View();
+
+        public IActionResult Register() => View();
         #endregion
 
         public async Task<IActionResult> Catalog()
@@ -102,6 +104,13 @@ namespace AniGEEK.Controllers
             var products = await Info.user.GetProductsFromFavoriteAsync();
             if (products is null) throw new Exception("No Products");
             return View(products);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(string login, string pass)
+        {
+            if (await client.RegisterAsync(login, pass)) return Redirect("~/Home/Login");
+            else return View();
         }
     }
 }
